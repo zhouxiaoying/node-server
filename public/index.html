@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://172.16.6.113:38086/upload/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="content"/>
+        <input type="submit" value="上传"/>
+    </form>
+    <input type="button" value="下载" onclick="download()"/>
+    <a href="http://172.16.6.113:38086/download/仓库上传步骤.txt">12345</a>
+    <script>
+        function download(){
+        //     var url = location.origin+`/仓库上传步骤.txt`
+        // window.location.href = encodeURI(url) //处理中文参数
+        // let iframe = document.createElement("iframe")
+        // iframe.style.display = "none"
+        // iframe.src = url
+        // iframe.onload = function(){
+        //     document.body.removeChild(iframe)
+        // }
+        // document.body.appendChild(iframe)
+        }
+    </script>
+</body>
+</html>
