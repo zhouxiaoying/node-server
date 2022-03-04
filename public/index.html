@@ -12,7 +12,9 @@
         <input type="submit" value="上传"/>
     </form>
     <input type="button" value="下载" onclick="download()"/>
+    <input type="button" value="下载123" onclick="download123()"/>
     <a href="http://172.16.6.113:38086/download/仓库上传步骤.txt">12345</a>
+    <script type="text/javascript" src="./jquery.min.js"></script>
     <script>
         function download(){
         //     var url = location.origin+`/仓库上传步骤.txt`
@@ -24,6 +26,39 @@
         //     document.body.removeChild(iframe)
         // }
         // document.body.appendChild(iframe)
+
+            $.ajax({
+                url:'/download/ftms?t='+Date.now(),
+                method:'Get',
+                success:function(filename){
+                    var a = document.createElement('a')
+                    alert(filename);
+                    let temp = filename.split('.')[0]
+                    a.setAttribute('href','./download/'+filename+'?t='+Date.now())
+                    a.click()
+                },
+                error:function(){
+                    alert('获取失败')
+                }
+            })
+
+
+        }
+        function download123(){
+            $.ajax({
+                url:'/upload/down?t='+Date.now(),
+                method:'Get',
+                success:function(filename){
+                    var a = document.createElement('a')
+                    alert(filename);
+                    let temp = filename.split('.')[0]
+                    a.setAttribute('href','./download/'+filename+'?t='+Date.now())
+                    a.click()
+                },
+                error:function(){
+                    alert('获取失败')
+                }
+            })
         }
     </script>
 </body>
