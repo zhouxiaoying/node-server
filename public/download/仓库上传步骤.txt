@@ -1,8 +1,0 @@
-Ҳ�� �����е��鷳
-1. ��Ҫ����ȫ�ְ�װverdaccio 
-2. ���������ļ� config.yaml
-3. ������������ verdaccio --config=./config2.yaml  //
-4. ���ñ��ش��� ������ ����nrm���� ���л�����Դ
-6. ������ػ��� npm cache clean -f ���� yarn cache clean
-6. ��װ ��Ȼ�󿽱�storage -> zip 
-7. ���ʼ�������������8M��Ҫ�а�
